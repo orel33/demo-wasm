@@ -22,8 +22,7 @@
         function callAdd() {
             var x = parseInt(document.getElementById('x').value);
             var y = parseInt(document.getElementById('y').value);
-            // const result = Module.ccall('add', 'number', ['number', 'number'], [x, y]);
-            const result = Module._add(x, y);
+            const result = Module._int_add(x, y);
             var elm = document.getElementById('result');
             elm.innerHTML = `<p> Result: ${result} </p>`;
         }
@@ -31,8 +30,7 @@
         function callMul() {
             var x = parseInt(document.getElementById('x').value);
             var y = parseInt(document.getElementById('y').value);
-            // const result = Module.ccall('mul', 'number', ['number', 'number'], [x, y]);
-            const result = Module._mul(x, y);
+            const result = Module._int_mul(x, y);
             var elm = document.getElementById('result');
             elm.innerHTML = `<p> Result: ${result} </p>`;
         }

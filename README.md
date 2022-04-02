@@ -26,7 +26,7 @@ functions `int_add()`, `int_mul()` and `int_sqrt()`.
 
 ### Demo Node.js
 
-Compilation:
+**Compilation**:
 
 ```bash
 emcc math.c -o math.js -s MODULARIZE -s EXPORTED_RUNTIME_METHODS=ccall,cwrap
@@ -34,6 +34,7 @@ emcc math.c -o math.js -s MODULARIZE -s EXPORTED_RUNTIME_METHODS=ccall,cwrap
 
 Note that both files `math.js` and `math.wasm` are generated.
 
+**Test**: 
 Lets now prepare a simple [test.js](test.js) for `Node.js` that uses this
 `math.js` module:
 
@@ -43,11 +44,13 @@ node test.js
 
 ### Demo Web
 
-Compilation:
+**Compilation**:
 
 ```bash
 emcc math.c -o math.js -s EXPORTED_RUNTIME_METHODS=ccall,cwrap
 ```
+
+FIXME: how to use the option `-s MODULARIZE` instead of default `Module`?
 
 Lets now preprare a web page [test.html](test.html) that will import the
 `math.js` module.
@@ -57,9 +60,8 @@ To test this, you need to publish these files (`test.html`, `math.js` and
 browser with `http://` protocol. Warning, local access with `file://` protocol
 will fail!
 
-Demo: 
+**Demo**: <https://aurelien-esnard.emi.u-bordeaux.fr/demo-wasm/test.html>
 
-FIXME: how to use the option `-s MODULARIZE` instead of default `Module`?
 
 ## Documentation
 
