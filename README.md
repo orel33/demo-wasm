@@ -55,12 +55,15 @@ FIXME: how to use the option `-s MODULARIZE` instead of default `Module`?
 Lets now preprare a web page [test.html](test.html) that will import the
 `math.js` module.
 
+![](wasm-add.png)
+
 To test this, you need to publish these files (`test.html`, `math.js` and
 `math.wasm`) on your favorite web server. Then, you can open it in your favorite
 browser with `http://` protocol. Warning, local access with `file://` protocol
 will fail!
 
 **Demo**: <https://aurelien-esnard.emi.u-bordeaux.fr/demo-wasm/test.html>
+
 
 
 ## Documentation
