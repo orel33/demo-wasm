@@ -1,7 +1,7 @@
 # Demo Wasm
 
 This demo shows how to use [Emscripten](https://emscripten.org/index.html), to
-compile C/C++ code into JavaScript and run that on the web. 
+compile C/C++ code into JavaScript and run that on the web.
 
 Emscripten is a complete compiler toolchain to WebAssembly, using LLVM, that
 enables porting your C/C++ project to browsers, Node.js, or Wasm runtimes.
@@ -34,7 +34,8 @@ emcc math.c -o math.js -s MODULARIZE -s EXPORTED_RUNTIME_METHODS=ccall,cwrap
 
 Note that both files `math.js` and `math.wasm` are generated.
 
-**Test**: 
+**Test**:
+
 Lets now prepare a simple [test.js](test.js) for `Node.js` that uses this
 `math.js` module:
 
@@ -50,7 +51,8 @@ node test.js
 emcc math.c -o math.js -s EXPORTED_RUNTIME_METHODS=ccall,cwrap
 ```
 
-FIXME: how to use the option `-s MODULARIZE` instead of default `Module`?
+See [FAQ](https://emscripten.org/docs/getting_started/FAQ.html) to see how to
+use the option `-s MODULARIZE` instead of default `Module`.
 
 Lets now preprare a web page [test.html](test.html) that will import the
 `math.js` module.
